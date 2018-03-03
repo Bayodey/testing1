@@ -1,0 +1,9 @@
+---
+- name: Install wordpress on a webserver
+  hosts: webserver
+
+  tasks        :
+    - name     : download wordpress
+      get_url  :
+       url     : http://wordpress.org/latest.tar.gz
+       dest    : /var/www/html
